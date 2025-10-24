@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppings Black";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/poppins/Poppins-Light.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Black";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/roboto/Roboto-Light.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "Poppings Bold";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("./assets/fonts/poppins/Poppins-Bold.ttf") format("woff2");
+}
+
+@theme {
+  --color-primary: #D4A276;
+  --color-primary-600: #F0D4B0;
+  --color-secondary: #FFDF8F;
+  --color-accent: ;
+  --color-muted: #6b7280;
+  --color-bg: ##faf5e9;
+  --color-foreground: #0f172a;
+
+  --font-poppins: "Poppings Black", sans-serif;
+  --font-poppins-bold: "Poppings Bold", sans-serif;
+  --font-roboto: "Roboto Black", sans-serif;
+}
+
+@layer base {
+  .dark {
+    --color-bg: #0b1220;
+    --color-foreground: #D4A276;
+  }
+
+  body {
+    font-family: var(--font-poppins);
+    color: var(--color-foreground);
+    background-color: var(--color-primary-600);
+  }
+}
